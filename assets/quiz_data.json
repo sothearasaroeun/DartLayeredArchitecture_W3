@@ -1,0 +1,86 @@
+{
+  "id": "quiz-1",
+  "questions": [
+    {
+      "id": "q1",
+      "title": "Capital of France?",
+      "choices": [
+        "Paris",
+        "London",
+        "Rome"
+      ],
+      "goodChoice": "Paris",
+      "score": 10
+    },
+    {
+      "id": "q2",
+      "title": "2 + 2 = ?",
+      "choices": [
+        "2",
+        "4",
+        "5"
+      ],
+      "goodChoice": "4",
+      "score": 50
+    }
+  ],
+  "submissions": [
+    {
+      "id": "7492385a-06bb-462f-9a59-e77bc5f46312",
+      "player": {
+        "id": "d2b38135-9e01-4fa9-8852-4d046012c648",
+        "name": "Sotheara"
+      },
+      "answers": [
+        {
+          "id": "cd1e2a98-70fc-491b-8b4f-e8a5a11e39f2",
+          "questionId": "q1",
+          "answerChoice": "Rome"
+        },
+        {
+          "id": "666a0b3a-31fe-4343-99a8-dd7e479cc630",
+          "questionId": "q2",
+          "answerChoice": "4"
+        }
+      ]
+    },
+    {
+      "id": "05b7dc40-d7ce-4ab8-84e5-194025d6cd81",
+      "player": {
+        "id": "74596583-f8d4-497c-9ecf-6ac5e46d3158",
+        "name": "Sam"
+      },
+      "answers": [
+        {
+          "id": "90d6e45c-9406-4fc4-ab37-4c0d61c861be",
+          "questionId": "q1",
+          "answerChoice": "Paris"
+        },
+        {
+          "id": "db7f299e-6891-4969-9a8c-43b9537e85e3",
+          "questionId": "q2",
+          "answerChoice": "5"
+        }
+      ]
+    },
+    {
+      "id": "7b88465b-3b9e-4e4b-99b2-a412e77acb9f",
+      "player": {
+        "id": "fcd9b04e-023e-479d-b4b7-776367944b95",
+        "name": "Ronan"
+      },
+      "answers": [
+        {
+          "id": "bc3d3b7a-35e6-4ae8-92d6-a592b4d5c593",
+          "questionId": "q1",
+          "answerChoice": "Paris"
+        },
+        {
+          "id": "8d8d49fb-0403-4f1e-8e46-299810dca62b",
+          "questionId": "q2",
+          "answerChoice": "4"
+        }
+      ]
+    }
+  ]
+}

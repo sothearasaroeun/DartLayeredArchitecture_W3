@@ -1,11 +1,12 @@
 import 'dart:io';
-
+import '../data/quiz_file_provider.dart';
 import '../domain/quiz.dart';
 
 class QuizConsole {
   Quiz quiz;
+  final QuizFileProvider? fileProvider;
 
-  QuizConsole({required this.quiz});
+  QuizConsole({required this.quiz, this.fileProvider});
 
   void startQuiz() {
     print('--- Welcome to the Quiz ---\n');
@@ -27,7 +28,6 @@ class QuizConsole {
       stdout.write('Your answer: ');
       String? userInput = stdin.readLineSync();
 
-      // Check for null input
       if (userInput != null && userInput.isNotEmpty) {
         Answer answer = Answer(question: question, answerChoice: userInput);
         quiz.addAnswer(answer);
@@ -41,12 +41,17 @@ class QuizConsole {
     int totalScore  = quiz.getTotalScore();
     quiz.addOrUpdatePlayer(player.name, totalScore);
   
+    final submission = Submission(player: player, answers: List.from(quiz.answers));
+    quiz.addSubmission(submission);
+
     print('$name, your score in percentage: $score % correct');
     print('$name, your score in point: $totalScore');
     quiz.showAllScores();
     
+    if (fileProvider != null) {
+        fileProvider!.saveQuiz(quiz);
+      }
     }
     print('--- Quiz Finished ---');
   }
 }
- 
